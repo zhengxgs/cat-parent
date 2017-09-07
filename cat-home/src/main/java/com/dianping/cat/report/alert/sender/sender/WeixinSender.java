@@ -53,7 +53,7 @@ public class WeixinSender extends AbstractSender {
 	}
 
 	/**
-	 * 发送微信
+	 * 发送微信, 直接调用本地写死的token发送，不实用外部接口
 	 * @param message
 	 * @param receiver
 	 * @param sender
