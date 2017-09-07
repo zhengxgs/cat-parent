@@ -157,7 +157,7 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 		String appName = null;
 		InputStream in = null;
 		try {
-			// zhengxgs@ 2016-9-19 11:51:25
+			// zhengxgs@ 2016-9-19 11:51:25 读取classpath下的配置文件
 			// in = Thread.currentThread().getContextClassLoader().getResourceAsStream(PROPERTIES_CLIENT_XML);
 			in = Thread.currentThread().getContextClassLoader().getResourceAsStream("app.properties");
 
