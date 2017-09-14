@@ -32,6 +32,7 @@ import com.dianping.cat.report.alert.web.WebAlert;
 public class CatHomeModule extends AbstractModule {
 	public static final String ID = "cat-home";
 
+	// 加载
 	@Override
 	protected void execute(ModuleContext ctx) throws Exception {
 		ServerConfigManager serverConfigManager = ctx.lookup(ServerConfigManager.class);
