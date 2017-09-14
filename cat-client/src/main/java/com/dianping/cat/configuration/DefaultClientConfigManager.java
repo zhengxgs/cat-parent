@@ -23,7 +23,7 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 	private static final String CAT_CLIENT_XML = "/META-INF/cat/client.xml";
 
 	private static final String PROPERTIES_CLIENT_XML = "/META-INF/app.properties";
-	
+
 	private static final String XML = "/data/appdatas/cat/client.xml";
 
 	private Logger m_logger;
@@ -158,9 +158,9 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 		InputStream in = null;
 		try {
 			// zhengxgs@ 2016-9-19 11:51:25 读取classpath下的配置文件
-			// in = Thread.currentThread().getContextClassLoader().getResourceAsStream(PROPERTIES_CLIENT_XML);
-			in = Thread.currentThread().getContextClassLoader().getResourceAsStream("app.properties");
-
+			in = Thread.currentThread().getContextClassLoader().getResourceAsStream(PROPERTIES_CLIENT_XML);
+			// zhengxgs@ 2017-9-14 10:16:40 恢复原样
+			//in = Thread.currentThread().getContextClassLoader().getResourceAsStream("app.properties");
 			if (in == null) {
 				in = Cat.class.getResourceAsStream(PROPERTIES_CLIENT_XML);
 			}
@@ -195,7 +195,7 @@ public class DefaultClientConfigManager implements LogEnabled, ClientConfigManag
 	@Override
 	public void initialize() throws InitializationException {
 		File configFile = new File(XML);
-		
+
 		initialize(configFile);
 	}
 
