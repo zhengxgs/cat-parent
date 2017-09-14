@@ -92,7 +92,7 @@ public class LocalReportBucket implements ReportBucket, LogEnabled {
 
 				// TODO zhengxgs @ print value
 				String value = new String(bytes, "utf-8");
-				System.out.println("findById: " + value);
+				// System.out.println("findById: " + value);
 				return value;
 			} catch (Exception e) {
 				m_logger.error(String.format("Error when reading file(%s)!", m_readDataFile), e);
