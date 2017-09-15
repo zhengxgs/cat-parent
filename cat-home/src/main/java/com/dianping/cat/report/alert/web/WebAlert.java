@@ -139,6 +139,7 @@ public class WebAlert implements Task {
 	}
 
 	private void processRule(Rule rule) {
+		// 1;-1;-1;-1:request:esf-url
 		String id = rule.getId();
 		int index1 = id.indexOf(":");
 		int index2 = id.indexOf(":", index1 + 1);

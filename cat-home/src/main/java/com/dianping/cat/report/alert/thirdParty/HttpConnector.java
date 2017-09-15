@@ -25,7 +25,9 @@ public class HttpConnector {
 			connection.setReadTimeout(5000);
 			int response_code = connection.getResponseCode();
 
-			if (response_code == HttpURLConnection.HTTP_OK) {
+			if (response_code == HttpURLConnection.HTTP_OK
+					|| response_code == HttpURLConnection.HTTP_MOVED_PERM
+					|| response_code == HttpURLConnection.HTTP_MOVED_TEMP) {
 				result = true;
 			}
 		} catch (Exception e) {

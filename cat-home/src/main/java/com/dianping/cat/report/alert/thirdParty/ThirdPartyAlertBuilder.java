@@ -15,6 +15,11 @@ import com.dianping.cat.home.alert.thirdparty.entity.Http;
 import com.dianping.cat.home.alert.thirdparty.entity.Par;
 import com.dianping.cat.message.Transaction;
 
+/**
+ * http socket 监控
+ *
+ * 在这个task里面进行connect然后根据判断添加到ThirdPartyAlert类的m_entities队列中进行告警
+ */
 public class ThirdPartyAlertBuilder implements Task, LogEnabled {
 
 	@Inject
